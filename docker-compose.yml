@@ -1,0 +1,25 @@
+services:
+  php:
+    build: ./docker/php
+    container_name: php_app
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: php -S 0.0.0.0:8000 -t public
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: betting_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123123
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:

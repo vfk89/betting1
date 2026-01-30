@@ -1,0 +1,17 @@
+# IDE / Editor
+.idea/
+
+# PHP / Composer
+/vendor/
+composer.lock
+
+# Environment
+.env
+
+# Docker
+docker/php/.env
+docker/php/vendor/
+docker-compose.override.yml
+
+# Logs
+*.log
