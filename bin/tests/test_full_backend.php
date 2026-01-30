@@ -30,7 +30,7 @@ use App\Services\BalanceService;
 use App\Services\EventService;
 use App\Services\BetService;
 
-use App\Controllers\Client\BetController;
+use App\Controllers\ApiController;
 
 // ----------------------------
 // Репозитории
